@@ -2,8 +2,10 @@
   "communities": {
     "0": [
       "api_index",
+      "api_index_read_root",
       "fastapi",
       "fastapi_responses",
+      "get",
       "openai",
       "os"
     ],
@@ -15,26 +17,50 @@
       "uploadfile"
     ],
     "2": [
+      "readme_gemma_4",
+      "readme_google_gemini",
+      "readme_graphify",
+      "readme_retailscope",
+      "requirements_fastapi"
+    ],
+    "3": [
       "vercel",
       "vercel_builds",
       "vercel_routes"
     ],
-    "3": [
-      "api_index_read_root",
-      "get"
+    "4": [
+      "requirements_openai"
+    ],
+    "5": [
+      "requirements_pydantic"
+    ],
+    "6": [
+      "requirements_python_multipart"
+    ],
+    "7": [
+      "requirements_uvicorn"
     ]
   },
   "cohesion": {
-    "0": 0.4,
+    "0": 0.2857142857142857,
     "1": 0.4,
-    "2": 0.6666666666666666,
-    "3": 1.0
+    "2": 0.4,
+    "3": 0.6666666666666666,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0
   },
   "gods": [
     {
       "id": "api_index_run_audit",
       "label": "run_audit()",
       "degree": 5
+    },
+    {
+      "id": "readme_retailscope",
+      "label": "RetailScope",
+      "degree": 4
     },
     {
       "id": "api_index_read_root",
@@ -50,19 +76,56 @@
       "id": "vercel_routes",
       "label": "routes",
       "degree": 1
+    },
+    {
+      "id": "requirements_fastapi",
+      "label": "fastapi",
+      "degree": 1
+    },
+    {
+      "id": "readme_gemma_4",
+      "label": "Gemma 4",
+      "degree": 1
+    },
+    {
+      "id": "readme_google_gemini",
+      "label": "Google Gemini",
+      "degree": 1
+    },
+    {
+      "id": "readme_graphify",
+      "label": "Graphify",
+      "degree": 1
+    },
+    {
+      "id": "requirements_openai",
+      "label": "openai",
+      "degree": 0
     }
   ],
-  "surprises": [],
+  "surprises": [
+    {
+      "source": "RetailScope",
+      "target": "fastapi",
+      "source_files": [
+        "README.md",
+        "requirements.txt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
   "questions": [
     {
       "type": "bridge_node",
       "question": "Why does `run_audit()` connect `run_audit` to `index.py`?",
-      "why": "High betweenness centrality (0.214) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.077) - this node is a cross-community bridge."
     },
     {
-      "type": "bridge_node",
-      "question": "Why does `read_root()` connect `read_root` to `index.py`?",
-      "why": "High betweenness centrality (0.110) - this node is a cross-community bridge."
+      "type": "isolated_nodes",
+      "question": "What connects `fastapi`, `Gemma 4`, `Google Gemini` to the rest of the system?",
+      "why": "8 weakly-connected nodes found - possible documentation gaps or missing edges."
     }
   ]
 }

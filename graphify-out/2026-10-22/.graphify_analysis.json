@@ -1,0 +1,123 @@
+{
+  "communities": {
+    "0": [
+      "api_index",
+      "api_index_read_root",
+      "fastapi",
+      "fastapi_responses",
+      "get",
+      "openai",
+      "os"
+    ],
+    "1": [
+      "api_index_run_audit",
+      "base64",
+      "json",
+      "post",
+      "uploadfile"
+    ],
+    "2": [
+      "readme_gemma_4",
+      "readme_google_gemini",
+      "readme_graphify",
+      "readme_retailscope",
+      "requirements_fastapi"
+    ],
+    "3": [
+      "vercel",
+      "vercel_builds",
+      "vercel_routes"
+    ],
+    "4": [
+      "requirements_openai"
+    ],
+    "5": [
+      "requirements_pydantic"
+    ],
+    "6": [
+      "requirements_python_multipart"
+    ],
+    "7": [
+      "requirements_uvicorn"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2857142857142857,
+    "1": 0.4,
+    "2": 0.4,
+    "3": 0.6666666666666666,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0
+  },
+  "gods": [
+    {
+      "id": "api_index_run_audit",
+      "label": "run_audit()",
+      "degree": 5
+    },
+    {
+      "id": "readme_retailscope",
+      "label": "RetailScope",
+      "degree": 4
+    },
+    {
+      "id": "api_index_read_root",
+      "label": "read_root()",
+      "degree": 2
+    },
+    {
+      "id": "vercel_builds",
+      "label": "builds",
+      "degree": 1
+    },
+    {
+      "id": "vercel_routes",
+      "label": "routes",
+      "degree": 1
+    },
+    {
+      "id": "readme_gemma_4",
+      "label": "Gemma 4",
+      "degree": 1
+    },
+    {
+      "id": "readme_google_gemini",
+      "label": "Google Gemini",
+      "degree": 1
+    },
+    {
+      "id": "readme_graphify",
+      "label": "Graphify",
+      "degree": 1
+    },
+    {
+      "id": "requirements_fastapi",
+      "label": "fastapi",
+      "degree": 1
+    },
+    {
+      "id": "requirements_uvicorn",
+      "label": "uvicorn",
+      "degree": 0
+    }
+  ],
+  "surprises": [
+    {
+      "source": "RetailScope",
+      "target": "fastapi",
+      "source_files": [
+        "README.md",
+        "requirements.txt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "tokens": {
+    "input": 1230,
+    "output": 1417
+  }
+}
