@@ -1,0 +1,68 @@
+{
+  "communities": {
+    "0": [
+      "api_index",
+      "fastapi",
+      "fastapi_responses",
+      "openai",
+      "os"
+    ],
+    "1": [
+      "api_index_run_audit",
+      "base64",
+      "json",
+      "post",
+      "uploadfile"
+    ],
+    "2": [
+      "vercel",
+      "vercel_builds",
+      "vercel_routes"
+    ],
+    "3": [
+      "api_index_read_root",
+      "get"
+    ]
+  },
+  "cohesion": {
+    "0": 0.4,
+    "1": 0.4,
+    "2": 0.6666666666666666,
+    "3": 1.0
+  },
+  "gods": [
+    {
+      "id": "api_index_run_audit",
+      "label": "run_audit()",
+      "degree": 5
+    },
+    {
+      "id": "api_index_read_root",
+      "label": "read_root()",
+      "degree": 2
+    },
+    {
+      "id": "vercel_builds",
+      "label": "builds",
+      "degree": 1
+    },
+    {
+      "id": "vercel_routes",
+      "label": "routes",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `run_audit()` connect `run_audit` to `index.py`?",
+      "why": "High betweenness centrality (0.214) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `read_root()` connect `read_root` to `index.py`?",
+      "why": "High betweenness centrality (0.110) - this node is a cross-community bridge."
+    }
+  ]
+}
