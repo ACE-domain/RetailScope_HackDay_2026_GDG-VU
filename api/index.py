@@ -76,55 +76,6 @@ HTML_TEMPLATE = """
                         Export Report
                     </button>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col justify-center">
-                        <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Empty Slots Detected</div>
-                        <div class="text-3xl font-bold text-gray-900 dark:text-white" id="emptySlots"></div>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col justify-center">
-                        <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Shelf Organization Score</div>
-                        <div class="flex items-baseline gap-2">
-                            <div class="text-3xl font-bold text-gray-900 dark:text-white" id="shelfScore"></div>
-                            <div class="text-lg font-medium text-gray-500 dark:text-gray-400">/ 10</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-                    <div class="p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Priority Triage</h3>
-                    </div>
-                    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h4 class="text-sm font-bold text-red-600 dark:text-red-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                                Urgent (High Revenue Impact)
-                            </h4>
-                            <ul id="urgentRestock" class="space-y-3 text-gray-700 dark:text-gray-300"></ul>
-                        </div>
-                        <div>
-                            <h4 class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Standard Restock
-                            </h4>
-                            <ul id="standardRestock" class="space-y-3 text-gray-700 dark:text-gray-300"></ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-                    <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center bg-gray-50/50 dark:bg-gray-800/50">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Automated Purchase Order</h3>
-                        <button id="copyPOBtn" class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            Copy to Clipboard
-                        </button>
-                    </div>
-                    <div class="p-6 bg-gray-50 dark:bg-gray-900/50 rounded-b-xl">
-                        <pre id="purchaseOrder" class="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-300 font-mono leading-relaxed"></pre>
-                    </div>
-                </div>
             </div>
         </main>
     </div>
